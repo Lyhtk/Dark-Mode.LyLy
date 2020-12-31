@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* khai báo biến */
+:root{
+    --font1: 'Oswald', sans-serif;
+    --size1: 45px;
+    --lineheight1: 55px;
+    --font2: 'Amiri', serif;
+    --size2: 20px;
+    --color2: #666666;
+}
+
+.banner_top{
+    background: url(img/background.jpg) top center;
+    height: 600px;
+    background-attachment: fixed;/*cố định lại background*/
+    background-size: cover; /*ảnh vừa khít*/
+}
+
+.banner_top ._3cot{
+    display: flex; /*chia cột*/
+}
+
+.banner_top ._3cot ._1cot{
+    width: 33.33%; /*chia 3 cột bằng nhau*/
+}
+
+.banner_top ._3cot ._1cot.cottrai{
+}
+
+.banner_top ._3cot ._1cot.cottrai a{
+    font-size: 25px;
+    color: white;
+    display: inline-block; /* để nhận thuộc tính padding thụt xuống*/
+    padding: 30px 30px;
+    transition: 0.4s;
+}
+
+.banner_top ._3cot ._1cot.cottrai a:hover{
+    color:#0345bf;
+}
+
+.banner_top ._3cot ._1cot.cotgiua{
+    text-align: center; /* căn logo ra giữa*/
+}
+
+.banner_top ._3cot ._1cot.cotgiua img{
+    height: 30px;
+    width: 85px;
+    padding-top: 30px ;
+}
+
+.banner_top ._3cot ._1cot.cotphai{
+    text-align: right; /* căn icon ra sát mép phải*/
+    padding-right: 30px;
+}
+
+.banner_top ._3cot ._1cot.cotphai a{
+    color: white;
+    font-size: 25px;
+    display: inline-block; /* để nhận thuộc tính padding thụt xuống*/
+    padding: 30px 5px;
+}
+
+/* tạo div nền đen trên ảnh */
+.banner_top{
+    position: relative;
+}
+
+.banner_top:before{
+    content: '';
+    position: absolute; /* chia layer*/
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.411) 0%, #01010100 50%, #00000069 100% );
+}
+/* cái div đen nằm trên cả icon và menu nên phải ảnh, div đen, icon và menu nên phải chia layer cho cái khối chứa menu, logo, icon là khối 3 cột  */
+.banner_top ._3cot{
+    position: absolute;
+    top:0px;
+    width: 100%;
+}
+
+/* phần chữ trên khung ảnh */
+.text_banner{
+    position: absolute; /* chia layer để cho lớp đen khỏi phủ lên*/
+    width: 100%;
+    top: 40%;
+    color: white;
+    margin-left: 150px;
+}
+
+.text_banner .content{
+    width: 1170px;
+    margin: auto;
+}
+.text_banner .content .small{
+    font-size: 20px;
+}
+.text_banner .content h1{
+    font-family: var(--font1);
+    font-size: var(--size1);
+    line-height: var(--lineheight1);
+    color: white;
+    width: 50%;
+}
+/* end css top */
+.content1{
+    width: 1170px;
+    margin: auto;
+    padding: 80px 0;
+    display: flex;
+    font-family: var(--font2);
+    font-size: var(--size2);
+    color: var(--color2);
+}
+.content1 .left{
+    width: 35%;
+    margin-left: 150px;
+}
+.content1 .left span{
+    font-size: 17px;
+
+}
+.content1 .left h2{
+    font-family: var(--font1);
+    font-size: 22px;
+    width: 50%;
+    line-height: 35px;
+}
+
+.content1 .right{
+    width: 65%;
+    font-size: 20px;
+
+}
+
+.content1 .right p{
+    line-height: 20px; /*độ giãn dòng*/
+    margin-top: 15px;
+}
+
+.hieuung{
+    padding: 18px 0;
+    color:var(--color2) ;
+    transition: 0.4s;
+    
+}
+
+.hieuung .icon{
+    display: inline;
+    transition: 0.4s;
+    position: relative;
+    left: -10px;
+}
+
+.hieuung .chu {
+     display: inline;
+     transition: 0.4s;
+}
+.hieuung .chu a{
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--color2);
+    display: inline;
+    transition: 0.4s;
+}
+.hieuung:hover .icon  {
+    color: black;
+    left: 2px;
+}
+
+/* phần ảnh menu*/
+.img{
+    background: black;
+}
+
+.img .menu{
+    padding: 100px 0;
+}
+.img .menu ul{
+    text-align: center;
+}
+.img .menu a{
+    text-decoration: none;
+    font-family: var(--font2);
+    color:#a09999;
+    font-size: 18px;
+    padding-left: 25px;
+    transition: 0.4s;
+}
+
+.img .menu a:hover{
+    color: white;
+}
+
+/* ảnh */
+.anh{
+    width: 1140px;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap; /* ảnh xuống dòng*/
+    justify-content: space-between ;
+}
+img{
+    width: 556px;
+    height: 370px;
+}
+.image_block {
+    position: relative;
+    padding-bottom: 29px;
+}
+
+.image_block .bigtext{
+    font-size: 25px;
+    color: white;
+    font-family: var(--font1);
+    position: absolute;
+    left:400px;
+    bottom: 270px;
+    transition: 0.5;
+}
+
+.image_block .smalltext{
+    font-size: 18px;
+    color: white;
+    font-family: var(--font2);
+    position: absolute;
+    left:438px;
+    bottom: 300px;
+    transition: 0.5;
+}
+

@@ -1,0 +1,23 @@
+a.chu{
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+    left: 30px;
+    text-align: center;
+}
+/* dùng css có thể tạo ra hai div một div ở trước befor một div ở sau after */
+/* after thay cho cái div kẻ bên vd1 */
+a.chu:after{
+    content:''; /* content là nội dung của cái after*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: limegreen;
+    transition: 0.3s;
+}
+
+a.chu:hover:after{
+    width: 100%;
+}

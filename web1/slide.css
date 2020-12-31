@@ -1,0 +1,8 @@
+.myslide{
+    width: 500px;
+    height: 300px;
+}
+/* xét trường hợp cho từng ảnh nếu ảnh bự*/
+.myslide img{
+    width: 500px;
+}

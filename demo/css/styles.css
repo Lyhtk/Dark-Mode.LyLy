@@ -1,0 +1,150 @@
+html{
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    line-height: 2.1428;
+    color: #929191;
+    background: #272727;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .body-fullpage{
+    overflow: hidden;
+  }
+  
+  
+  ::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: #cee002;
+  }
+  
+  ::selection{
+    background-color:#cee002;
+    color:#fff;
+  }
+  
+  -webkit-::selection{
+      background-color:#cee002;
+      color:#fff;
+  }
+  
+  ::-moz-selection{
+      background-color:#cee002;
+      color:#fff;
+  }
+
+
+  .btn{
+    color:#fff;
+    letter-spacing: 0.025em;
+    font-size: 1rem;
+    display: inline-block;
+    border:0;
+    border-radius: 0;
+    padding: 1.1em 2.28em 1em;
+    background-color: #000;
+    text-decoration: none;
+    -webkit-transition: all .3s ease-out!important;
+            transition: all .3s ease-out!important;
+  }
+  
+  .btn:hover,
+  .btn:focus{
+    background-color:#cee002;
+    color: #fff;
+    -webkit-box-shadow:none;
+    box-shadow: none;
+    outline: none!important;
+  }
+  
+  .btn-upper{
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  
+  .btn-yellow{
+    background: #cee002;
+    color: #000;
+  }
+  
+  .btn-yellow:hover,
+  .btn-yellow:focus{
+    background: #000;
+  }
+  
+  
+  
+  /* 1.5 Icons */
+  
+  
+  
+  .icon{
+    display: inline-block;
+  }
+  
+  .icon-medium{
+    font-size: 4.2rem;
+  }
+  
+  .link-arrow{
+    display: inline-block;
+    color: #000;
+    line-height: 1!important;
+    font-weight: 600;
+  }
+  
+  .link-arrow-2{
+    display: inline-block;
+    font-size: 1.14rem;
+    color: #999999;
+    font-weight: 400;
+  }
+  
+  .link-arrow .icon,
+  .link-arrow-2 .icon{
+    position: relative;
+    margin-left: 0.7rem;
+    font-size: 2.1em;
+    vertical-align: middle;
+    -webkit-transition: transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s;
+  }
+  
+  .link-arrow .icon{
+    top:0.1rem;
+  }
+  
+  .link-arrow .ion-ios-arrow-right{
+    font-size: 1.5em;
+  }
+  
+  .link-arrow-2 .ion-ios-arrow-right{
+    font-size: 1.5em;
+  }
+  
+  .link-arrow:hover,
+  .link-arrow-2:hover{
+    color: #cee002;
+    text-decoration:none;
+  }
+  
+  .link-arrow:hover .icon,
+  .link-arrow-2:hover .icon{
+    -webkit-transform: translateX(0.5rem);
+    -o-transform: translateX(0.5rem);
+    transform: translateX(0.5rem);
+  }
+  

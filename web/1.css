@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--white)
+}
+
+:root {
+    --white: white;
+    --black: black;
+    --gray: #fafafa;
+    }
+    [data-theme="dark"] {
+      --white: black;
+      --black: white;
+      --gray: black;
+    }
+
+.nav-container{
+    width: 100%;
+    
+    padding: 5px 40px;
+    position: fixed; /* cố định menu*/
+   /**/
+    
+    
+}
+
+.nav-container .nav-checkbox{
+    display: flex;
+}
+
+.nav-container .nav-checkbox .tab-content{
+    margin-left: 472px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-container .nav-checkbox .tab-content li{
+    padding: 15px 0;
+    cursor: pointer;
+    position: relative;
+    width: auto;
+    margin: 0 15px;
+    text-align: center;
+    
+}
+
+.tab-content a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(36, 27, 165);
+   font-weight: bolder;
+}
+
+.tab-content a::after{
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: rgb(5, 66, 66);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.tab-content a:hover{
+    color: rgb(71, 145, 230);
+}
+.tab-content a:hover::after{
+    opacity: 1;
+    bottom: 15px;
+
+}
+
+.nav-container .nav-checkbox .nav-logo img{
+    width: 150px;
+    margin-top: 10px;
+    padding-left: 45px;
+}
+
+
+/*  */
+.theme-switch-wrapper {
+    display: flex;
+     align-items: center;
+     position: absolute;
+     bottom: 5px;
+     /* right: 10px; */
+     z-index: 1000;
+}
+.theme-switch {
+     display: inline-block;
+     height: 25px;
+     position: relative;
+     width: 50px;
+}
+.theme-switch input {
+     display:none;
+}
+.slider {
+     background-color: #999;
+     bottom: 0;
+     cursor: pointer;
+     left: 0;
+     position: absolute;
+     right: 0;
+     top: 0;
+     transition: .4s;
+}
+.slider:before {
+     background-color: rgb(255, 255, 255);
+     bottom: 0.5px;
+     content: "";
+     height: 24px;
+     left: 1px;
+     position: absolute;
+     transition: .4s;
+     width: 24px;
+}
+input:checked + .slider {
+     background-color: rgb(18, 110, 248);
+}
+input:checked + .slider:before {
+    left: calc(10% - 5px);
+     transform: translateX(26px);
+}
+.slider.round {
+     border-radius: 34px;
+}
+.slider.round:before {
+     border-radius: 50%;
+}
+
+/* home */
+.banner_top{
+    background: url(img/llll.jpg) top center ;
+    height: 700px;
+    background-attachment: fixed;/*cố định lại background*/
+    background-size: contain; /*ảnh vừa khít*/
+    display: flex;
+}
+
+.banner_top .left{
+    width: 50%;
+    margin-top: 150px;
+}
+
+.banner_top .left .social-link h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 70px;
+    color: #FFFF00;
+    margin-left: 150px;
+    line-height: 80px;
+    margin-top: 100px;
+}
+
+.banner_top .right{
+    width: 50%;
+    margin-top: 250px;
+    margin-left: 200px;
+}
+.banner_top .right h1{
+    color: khaki;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    width: 350px;
+}
+
+/**/
+.social-link {
+	display: table;
+	
+	
+}
+.social-profiles {
+	margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.social-profiles .item {
+	display: inline-block;
+	margin-top: 20px;
+}
+.social-profiles .item a {
+	position: relative;
+	display: block;
+	width: 40px;
+	height: 40px;
+	color:rgb(212, 199, 12);
+	border:2px solid #f8e00a;
+	border-radius: 50%;
+	text-align: center;
+	padding-top: 7px;
+	margin: 7px;
+	z-index: 0;
+}
+
+.social-profiles .item a span {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -65px;
+	text-align: center;
+	color: rgb(3, 22, 5);
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	opacity: 0;
+}
+
+.social-profiles .item a:hover span {
+	display: block;
+	top: -20px;
+	width: 130px;
+	height: auto;
+	opacity: 1;
+	overflow: visible;
+}
+
+.social-profiles .item a:hover {
+	text-decoration: none;
+	color:#1fb5ac;
+}
+
+.social-profiles .item a:before {
+	font-family: FontAwesome;
+	font-size: 25px;
+}
+
+.social-profiles .item a:after {
+	content: "";
+	position: absolute;
+	border-radius: 100%;
+	top: 25%;
+	bottom: 25%;
+	left: 25%;
+	right: 25%;
+	background: transparent;
+	z-index: -1;
+}
+/* tạo hiệu ứng khi chạm chuột vào biểu tượng fb, ig,.. */
+.social-profiles .item a span,
+.social-profiles .item a:after {
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+

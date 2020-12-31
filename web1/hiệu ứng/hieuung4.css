@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bo{
+    width: 537px;
+    height: 535px;
+    position: relative;
+    overflow: hidden; /* tất cả những gì nằm ngoài pt bổ sẽ mất hết*/
+}
+.bo .anh{
+    width: 100%;
+    height: 100%;
+}
+.bo .xam{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute; /*chia layer nằm trên*/
+    background-color: #f0eef1;
+    transition: 0.4s;
+    opacity: 0;
+    border: 0px #67576B solid; /* bo viền*/
+    box-sizing: border-box; /*thêm padding và border nhưng ko thay đổi ptu, cách đều 10px 4 cạnh*/
+}
+
+.bo:hover .xam{
+    opacity: 0.95;
+    border: 15px #67576B solid; /* bo viền*/
+}
+.bo .chu{
+    font-family: segoe ui light;
+    opacity: 0;
+    transition: 0.4s;
+    position: absolute;
+    top: 65px;
+    left: 50px;
+}
+
+.bo:hover .chu{
+    opacity: 1;
+}
+.bo .chu h2{
+    font-size: 25px;
+    color: #67576B;
+    font-weight: bolder;
+}
+.bo .chu p{
+    color: #868586;
+    font-size: 20px;
+    
+}

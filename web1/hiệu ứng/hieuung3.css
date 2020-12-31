@@ -1,0 +1,46 @@
+
+.menu ul{
+    list-style: none;
+}
+.menu ul li{
+    padding-bottom: 5px;
+    transition: 0.4s;
+}
+.menu ul li .icon{ 
+    display: inline;
+    color: rgb(19, 126, 161);
+    opacity: 0;
+    transition: 0.4s;
+}
+.menu ul li .chu{
+    display: inline;
+    color: rgb(18, 230, 230);
+}
+/* di chuột vào li làm cho icon hiện */
+.menu ul li:hover .icon{
+    opacity: 1;
+}
+/* di chuột vào li (bao gồm icon và chữ) cho chính nó dịch sang bên trái */
+.menu ul li:hover{
+    margin-left: 20px;
+}
+
+/* * hình ảnh luôn luôn full màn hình */
+.menu{
+    background-image: url(img/anh16.jpg);
+    height: 100%;
+    top: 50px;
+    background-size: cover; /*hiển thị đầy đủ ảnh full*/
+}
+/* ảnh có khoảng trắng ở trên là do div ul body*/
+.menu ul{
+    margin-top: 0;
+    padding-top: 51px;
+    
+}
+
+body, html{
+    margin-top: 0;
+    margin-right: 0;
+    height: 100%;
+}

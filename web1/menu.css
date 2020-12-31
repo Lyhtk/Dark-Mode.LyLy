@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+._1item{
+    position: relative;
+    height: 20px;
+    width: 100px;
+    margin-left: 20px;
+    background-color: lightcoral;
+    line-height: 20px; /*thuộc tính giãn dòng*/
+}
+._1item .layer1{
+    margin-left: 20px;
+}
+._1item .layer2{
+    position: absolute;
+    top: 20px;
+    left:20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+._1item:hover .layer2{
+    visibility: visible;
+    opacity: 1;
+}
+
+._1item a{
+    list-style: none;
+    text-decoration: none;
+}
+._1item li{
+    list-style: none;
+}

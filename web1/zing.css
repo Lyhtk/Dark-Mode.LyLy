@@ -1,0 +1,50 @@
+.bo{
+    width: 400px;
+    height: 300px;
+    position: relative;  /*thuộc tính làm mốc đặt div bố mới tác dụng*/
+}
+.bo .lop1{
+    width: 400px;
+    height: 300px;
+    transition: 0.4s;
+    transform: scale(1);
+}
+/* lớp 2 là lớp có màu xám */
+.bo .lop2{
+    width: 400px;
+    height: 300px;
+    background-color: rgb(235, 228, 228);
+    opacity: 0; /* thuộc tính xđ đồ mờ độ trong suốt của pt */
+
+    /* thuộc tính chia layer */
+    position: absolute; /* kích hoạt layer top left để chia vị trí*/
+    top: 0;
+    left: 0;
+
+    transition: 0.4s; /* có transision thì hover mới có tác dụng*/
+}
+.bo .lop3{
+    color: honeydew;
+    font-size: 70px;
+    position: absolute;
+    top: 100px;
+    left: 160px;
+    opacity: 0;
+    transition: 0.4s;
+    transform: scale(0); /*thuộc tính zoom*/
+}
+
+/* xử lí hiệu ứng */
+/* khi di chuột vào lớp 2 hiện lên trc, di chuột vào div bố tác dụng vào lop2 */
+.bo:hover .lop2{
+    opacity: 0.4;
+}
+
+.bo:hover .lop3{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.bo:hover .lop1{
+    transform: scale(1.1);
+}

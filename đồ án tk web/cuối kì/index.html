@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark-Mode</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <div class="menu-wrap">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+                <div class="chu">
+                    <h1>LYLY</h1>
+                    <p>Front-End Developer</p>
+                </div>
+                
+            </div>
+
+            <div class="menu-h-xs">
+                <a href="#home">
+                    <div class="menu-item active">
+                        Home
+                    </div>
+                </a>
+                <a href="#about">
+                    <div class="menu-item">
+                        About
+                    </div>
+                </a>
+                <a href="#resume">
+                    <div class="menu-item">
+                        Resume
+                    </div>
+                </a>
+                <a href="#blog">
+                    <div class="menu-item">
+                        Blog
+                    </div>
+                </a>
+            </div>
+
+            <div class="right-menu">
+                <p class="text">Adjusted</p>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                       <input type="checkbox" id="checkbox" />
+                       <div class="slider round"></div>
+                    </label>
+                 </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- section home -->
+    <section id="home" class="fullheight align-items-center bg-img bg-img-fixed"
+        style="background-image: url(img/llll.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-xs-12">
+                    <div class="slogan">
+                        <p class="subtitle-top">Welcome to  <br>LyLy</p>
+                          <h1 class="display-2 text-white"><span class="text-primary">Hello</span> my name is LyLy.</h1>
+                        <div class="left-to-right play-on-scroll delay-4">
+                            <a href="#contact-us"><button id="home-btn" type="submit">Contact Us</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- secton about -->
+    <section class="about fullheight align-items-center" id="about">
+        <div class="container_2">
+            <div class="row">
+                <div class="col-7 h-xs">
+                    <img src="img/anh.jpg" alt=""
+                        class="fullwidth left-to-right play-on-scroll">
+                </div>
+                <div class="col-5 col-xs-12 align-items-center">
+                    <div class="about-slogan right-to-left play-on-scroll">
+                        <h3>
+                            <span class="primary-color">A</span> little <span class="primary-color">bit</span>
+                            about <span class="primary-color">me</span>
+                        </h3>
+                        <p>
+                            ➥ I'm Ly, a front -end developer with a little bit of experience in technology. With good knowledge of Database Design, javascrip, html & css
+                        </p>
+                        <p>
+                            ➥ Learning languages ​​and new technology is what I'm passionate about.
+                        </p>
+                        <p>
+                            ➥ I like being with people and helping people. I enjoy problem solving and challenging work and I’m serious about my work but I also like to have fun.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- resume -->
+
+    <section class="align-items-center bg-img bg-img-fixed" id="resume"
+        style="background-image: url(img/anh15.jpg);">
+        <div class="container">
+            <div class="resume-menu">
+                <img src="img/hl.jpg" alt="">
+                <h1 class="text_2">
+                    What do <span class="primary-color">you</span> want about me?
+                </h1>
+                
+                <div class="resume-category">
+                    <div class="zoom play-on-scroll">
+                        <button class="active" data-food-type="all">
+                            Summary
+                        </button>
+                    </div>
+                    <div class="zoom play-on-scroll delay-2">
+                        <button data-food-type="salad">
+                            Skill
+                        </button>
+                    </div>
+                    <div class="zoom play-on-scroll delay-4">
+                        <button data-food-type="lorem">
+                            Project
+                        </button>
+                    </div>
+                 
+                </div>
+
+                <div class="resume-item-wrap all">
+                    <div class="resume-item salad-type">
+                        <div class="item-wrap bottom-up play-on-scroll">
+                            <div class="education">
+                                <div class="text_max">
+                                    EDUCATION
+                                </div>
+                                <div class="text_min">
+                                    <p>➥ The Univerersity of DangNang - University of Science and Education </p>
+                                    <p> ➥ Major: Information Technology </p>
+                                    <h4>2020 - Present</h4>
+                                    <p>➥ Learn to code and teach, basics of the web. The information system is the perfect combination of technology and teaching.</p>
+                                    <h4>2015 - 2018</h4>
+                                    <p> ➥ Cao Ba Quat High School <br> A memorable time of my life ...</p>
+                                </div>
+                            </div>
+
+                            <div class="experience">
+                                <div class="text_max">
+                                    EXPERIENCE
+                                </div>
+                                <div class="text_min">
+                                    <p>➥ Learn and build website templates from html, css, js ...</p>
+                                    <p>➥ Learn, write and build databases with php.</p>
+                                    <p>➥ Good teamwork and searching skills.</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+    </section>
+    <!--  -->
+    <!-- blog -->
+    <section id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-xs-12">
+                    <div class="review-wrap zoom play-on-scroll delay-2">
+                        <div class="review-content">
+                            <p>
+                                Hoi An has long been an attractive tourist destination for the country and
+                                international friends. With ancient cultural space and interesting tourism, 
+                                the space of Hoi An ancient town is bold in traditional colors.
+                            </p>
+                            <div class="review-img bg-img "
+                                style="background-image: url(img/phoco.jpg);">
+                            </div>
+                        </div>
+                        <div class="review-info">
+                            <h3>
+                                Hoi An
+                            </h3>
+                            <div class="rating">
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                                <i class="bx bxs-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-xs-12">
+                    <div class="zoom play-on-scroll">
+                        <div class="review-wrap active">
+                            <div class="review-content">
+                                <p>
+                                    Linh Ung Non Nuoc Pagoda is located in the scenic area of ​​Ngu Hanh Son.
+                                     This place welcomes many tourists to visit. Right in front of the pagoda scene, 
+                                     visitors will be surprised to see the Buddha statue of Buddha Shakyam 10 m tall 
+                                     and the scenery with magical and peaceful beauty.
+                                </p>
+                                <div class="review-img bg-img"
+                                    style="background-image: url(img/chualinhung.jpg);">
+                                </div>
+                            </div>
+                            <div class="review-info">
+                                <h3>
+                                    Non Nuoc Linh Ung Pagoda
+                                </h3>
+                                <div class="rating">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-xs-12">
+                    <div class="review-wrap zoom play-on-scroll delay-4">
+                        <div class="review-content">
+                            <p>
+                                Hue is a cultural land with a rich history, unique culture, many unique heritages and
+                                 festivals. Along with that, the serene, gentle and peaceful beauty of the landscape 
+                                 and the people here makes it so special and attractive.
+                            </p>
+                            <div class="review-img bg-img"
+                                style="background-image: url(img/hue.jpg);">
+                            </div>
+                        </div>
+                        <div class="review-info">
+                            <h3>
+                                Hue
+                            </h3>
+                            <div class="rating">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact us -->
+    <section class="contact" id="contact-us">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Please contact me when you can.</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Tam Hòa - Núi Thành - Quảng Nam</p>
+                    </div>
+        
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>0947465604</p>
+                    </div>
+        
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>lyhuynh.24102000@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+                <div class="contactForm">
+                    <form action="">
+                        <h2>Sent Message</h2>
+                        <div class="inputBox">
+                            <input type="text" name="" required="required">
+                            <span>Full Name</span>
+                        </div>
+
+                        <div class="inputBox">
+                            <input type="text" name="" required="required">
+                            <span>Email</span>
+                        </div>
+
+                        <div class="inputBox">
+                            <input required="required">
+                            <span>Type your Message...</span>
+                        </div>
+
+                        <div class="inputBox">
+                            <input type="submit" name="" value="Send">
+                            
+                        </div>
+                    </form>
+                </div>
+        
+            
+        </div>
+
+    </section>
+    <!-- end contact us -->
+    <!-- js -->
+    <script src="index.js"></script>
+</body>
+</html>

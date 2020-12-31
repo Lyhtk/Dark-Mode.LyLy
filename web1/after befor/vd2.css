@@ -1,0 +1,33 @@
+.menu ul{
+    display: flex; /*nằm ngang*/
+    list-style: none; /*mất dấu chấm*/
+}
+
+.menu ul li a{
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+/* mỗi thẻ a tự động thêm dấu /, after là con của thèn a */
+.menu ul li a:after{
+    content: '/';
+    padding-left: 5px; /* dấu / sẽ cách chữ home 5px*/
+}
+
+.nut{
+    display: block;
+    width: 130px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px; /*nằm giữa theo chiều dọc*/
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    background-image: -webkit-linear-gradient(left, #ffcd4a, #f15b26 );
+    transition: 1.4s;
+}
+
+.nut:hover{
+    background-image: -webkit-linear-gradient(left, #9cc026, #24f01dbb );
+    transition: 0s;
+}

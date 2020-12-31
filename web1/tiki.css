@@ -1,0 +1,39 @@
+.banner{
+    display: flex;
+    width: 1239px;
+    margin: auto;
+    height: 543px;
+
+}
+.banner ._1c{
+    width: 500px;
+    background-color: gray;
+   
+
+}
+.banner ._2c{
+    width: 583px;
+   
+
+}
+.banner ._2c .tren{
+    height: 361px;
+    transition: 0.7s;
+
+}
+.banner ._2c .duoi{
+    height: 182px;
+    display: flex;
+
+}
+.banner ._2c .motnua{
+    width: 50%;
+
+}
+/* tránh trường hợp ảnh quá to 100% bằng chiều rộng ptu cha*/
+
+.banner ._3c .saudiv{
+    display: flex;
+   flex-wrap: wrap;
+    
+}

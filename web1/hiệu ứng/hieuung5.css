@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bo{
+    width: 700px;
+    height: 440px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bo .anh{
+    width: 110%; /*ảnh dịch sang*/
+    height: 100%;
+    position: relative;
+    left: -20px;/**/
+    transition: 0.4s;
+}
+.bo:hover .anh{
+    left: 0px;
+}
+
+.chu{
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    
+    font-family: verdana;
+    /* background-color: khaki; */
+    color: rgba(32, 29, 29, 0.959);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    overflow: hidden; /*những phần tử bên ngoài chu sẽ biến mất*/
+}
+.chu .chunho{
+    color:red;
+    text-align: center;
+    /* position: relative;
+    top: 70px; kq như padding top*/
+    padding-top: 50px;
+    transition: 0.4s;
+    opacity: 0;
+}
+
+.bo:hover .chu .chunho{
+    opacity: 1;
+    padding-top: 0;
+
+}

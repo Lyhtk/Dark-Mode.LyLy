@@ -1,0 +1,576 @@
+
+:root {
+    --body-bg: #cfbcbc;
+    --paper: #F3DFC1;
+    --cover: #2c3e50;
+    --txt-header: #2c3e50;
+
+    --blue: #4267B2;
+    --red: #DB4437;
+    --yellow: #F4B400;
+    --green: #0F9D58;
+    --black: #000;
+    --grey: #7a7a7b;
+    }
+    [data-theme="dark"] {
+      --white:#333333;
+      --black: white;
+      --gray: black;
+      --grey: black;
+      --body-bg: black;
+      --paper:#333333;
+      --txt-header: #126EF8;
+      --blue: #126EF8;
+    }
+
+
+* {
+    font-family: 'Caveat',
+        cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--body-bg);
+    overflow: hidden;
+}
+
+.align-item-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    color: var(--txt-header);
+    
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: var(--black);
+}
+
+p {
+    font-size: 1.3rem;
+    color: var(--black);
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+.book-wrap {
+    height: 45rem;
+    width: 66rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+    perspective: 250rem;
+    opacity: 0;
+    transform: rotate(-20deg);
+    animation: show-up 2s forwards;
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--cover);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    transform-origin: 100% 100%;
+
+    transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform: rotateY(0);
+}
+
+.cover.turn {
+    transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform: rotateY(180deg);
+}
+
+.cover-left {
+    z-index: -1;
+}
+
+.book {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    perspective: 250rem;
+}
+
+.book-page {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+    display: grid;
+    background-color: var(--paper);
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2),
+        0px 0px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform: rotateY(0);
+    transform-origin: 0% 0%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.avt {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 2rem;
+    margin: auto;
+}
+
+.name {
+    font-size: 3rem;
+}
+
+.social-list i {
+    margin: 0 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.social-list i.fb {
+    color: var(--blue);
+}
+
+.social-list i.ytb {
+    color: var(--red);
+}
+
+.social-list i.git {
+    color: var(--black);
+}
+
+.social-list i.fb:hover,
+.social-list i.git:hover {
+    transform: scale(1.3) rotate(30deg);
+}
+
+.social-list i.ytb:hover {
+    transform: scale(1.3) rotate(-30deg);
+}
+
+.introduce {
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+.txt-header {
+    color: var(--txt-header);
+    font-weight: 800;
+}
+
+.page-right {
+    position: absolute;
+    right: 0;
+    transform-style: preserve-3d;
+}
+
+.page-right.turn {
+    transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform: rotateY(-180deg);
+}
+
+.page-front,
+.page-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.page-front {
+    transform: rotateY(0deg) translateZ(1px);
+}
+
+.page-back {
+    transform: rotateY(180deg) translateZ(1px);
+}
+
+.flex-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.time {
+    float: right;
+    font-size: 1rem;
+}
+
+.wrap-content {
+    text-align: left;
+    position: relative;
+    height: 100%;
+}
+
+.page-change {
+    position: absolute;
+    right: 0;
+    bottom: -1rem;
+    font-weight: 600;
+    color: var(--txt-header);
+    cursor: pointer;
+    animation: bounce-left 2s ease infinite;
+}
+
+.page-change i {
+    font-size: 2rem;
+}
+
+.page-change.back {
+    left: 0;
+    right: unset;
+}
+
+
+video {
+    border-radius: 1rem;
+    outline: transparent;
+    border: none;
+}
+
+.ytb-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    width: 3.4rem;
+    padding: .2rem .7rem;
+    background-color: var(--red);
+    color: #fff;
+    transition: width .2s ease-in-out;
+    border-radius: .5rem;
+}
+
+.ytb-btn:hover {
+    width: 8.5rem;
+}
+
+.ytb-btn i {
+    font-size: 2rem;
+    margin-right: .5rem;
+}
+
+/* php c++.. */
+.bars{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-gap: 20px 10px;
+}
+
+.bars .bar{
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.bars span{
+    margin-left: 15px;
+    display: block;
+    width: 80%;
+    height: 8px;
+    background-color: rgb(182, 178, 178);
+    margin-top: 5px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.bar span::before{
+    position: absolute;
+    content: "";
+    width: 70%;
+    height: 80%;
+    background-color: #479099;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
+
+.bar .photoshop::before{
+    width: 50%;
+    height: 80%;
+
+}
+
+.bar .php::before{
+    width: 50%;
+    height: 80%;
+
+}
+
+.bar .sql::before{
+    width: 90%;
+    height: 80%;
+
+}
+/* anh */
+.bo{
+    width: 537px;
+    height: 535px;
+    position: relative;
+    overflow: hidden; /* tất cả những gì nằm ngoài pt bổ sẽ mất hết*/
+}
+.bo .anh{
+    width: 40%;
+    height: 35%;
+}
+.bo .xam{
+    width: 40%;
+    height: 35%;
+    top: 0;
+    left: 0;
+    position: absolute; /*chia layer nằm trên*/
+    background-color: #f0eef1;
+    transition: 0.4s;
+    opacity: 0;
+    border: 0px #67576B solid; /* bo viền*/
+    box-sizing: border-box; /*thêm padding và border nhưng ko thay đổi ptu, cách đều 10px 4 cạnh*/
+}
+
+.bo:hover .xam{
+    opacity: 0.95;
+    border: 15px #67576B solid; /* bo viền*/
+}
+.bo .chu{
+    font-family: segoe ui light;
+    opacity: 0;
+    transition: 0.4s;
+    position: absolute;
+    top: 65px;
+    left: 30px;
+}
+
+.bo:hover .chu{
+    opacity: 1;
+}
+.bo .chu h2{
+    font-size: 25px;
+    color: #67576B;
+    font-weight: bolder;
+}
+.bo .chu p{
+    color: #868586;
+    font-size: 20px;
+    
+}
+
+.bo2{
+    margin-top: -370px;
+    margin-left: 225px;
+    width: 537px;
+    height: 535px;
+    position: relative;
+    overflow: hidden; /* tất cả những gì nằm ngoài pt bổ sẽ mất hết*/
+}
+.bo2 .anh{
+    width: 40%;
+    height: 35%;
+}
+.bo2 .xam{
+    width: 40%;
+    height: 35%;
+    top: 0;
+    left: 0;
+    position: absolute; /*chia layer nằm trên*/
+    background-color: #f0eef1;
+    transition: 0.4s;
+    opacity: 0;
+    border: 0px #67576B solid; /* bo viền*/
+    box-sizing: border-box; /*thêm padding và border nhưng ko thay đổi ptu, cách đều 10px 4 cạnh*/
+}
+
+.bo2:hover .xam{
+    opacity: 0.95;
+    border: 15px #67576B solid; /* bo viền*/
+}
+.bo2 .chu{
+    font-family: segoe ui light;
+    opacity: 0;
+    transition: 0.4s;
+    position: absolute;
+    top: 65px;
+    left: 30px;
+}
+
+.bo2:hover .chu{
+    opacity: 1;
+}
+.bo2 .chu h2{
+    font-size: 25px;
+    color: #67576B;
+    font-weight: bolder;
+}
+.bo2 .chu p{
+    color: #868586;
+    font-size: 20px;
+    
+}
+
+/*  */
+.bo3{
+    margin-top: -370px;
+    margin-left: 0px;
+    width: 537px;
+    height: 535px;
+    position: relative;
+    overflow: hidden; /* tất cả những gì nằm ngoài pt bổ sẽ mất hết*/
+}
+.bo3 .anh{
+    width: 40%;
+    height: 35%;
+}
+.bo3 .xam{
+    width: 40%;
+    height: 35%;
+    top: 0;
+    left: 0;
+    position: absolute; /*chia layer nằm trên*/
+    background-color: #f0eef1;
+    transition: 0.4s;
+    opacity: 0;
+    border: 0px #67576B solid; /* bo viền*/
+    box-sizing: border-box; /*thêm padding và border nhưng ko thay đổi ptu, cách đều 10px 4 cạnh*/
+}
+
+.bo3:hover .xam{
+    opacity: 0.95;
+    border: 15px #67576B solid; /* bo viền*/
+}
+.bo3 .chu{
+    font-family: segoe ui light;
+    opacity: 0;
+    transition: 0.4s;
+    position: absolute;
+    top: 65px;
+    left: 30px;
+}
+
+.bo3:hover .chu{
+    opacity: 1;
+}
+.bo3 .chu h2{
+    font-size: 25px;
+    color: #67576B;
+    font-weight: bolder;
+}
+.bo3 .chu p{
+    color: #868586;
+    font-size: 20px;
+    
+}
+
+/* dar-mode */
+.right-menu{
+    padding-top: 90px;
+    display: flex;
+    padding-right: 40px;
+}
+.right-menu .text{
+    color: var(--black);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.theme-switch-wrapper {
+    margin-right: 5px;
+     align-items: center;
+     right: 10px;
+     z-index: 1000;
+}
+.theme-switch {
+     display: inline-block;
+     height: 25px;
+     position: relative;
+     width: 50px;
+     margin-left: 15px;
+}
+.theme-switch input {
+     display:none;
+}
+.slider {
+     background-color: #999;
+     bottom: 0;
+     cursor: pointer;
+     left: 0;
+     position: absolute;
+     right: 0;
+     top: 0;
+     transition: .4s;
+}
+.slider:before {
+     background-color: rgb(255, 255, 255);
+     bottom: 0.5px;
+     content: "";
+     height: 24px;
+     left: 1px;
+     position: absolute;
+     transition: .4s;
+     width: 24px;
+}
+input:checked + .slider {
+     background-color: rgb(18, 110, 248);
+}
+input:checked + .slider:before {
+    left: calc(10% - 5px);
+     transform: translateX(26px);
+}
+.slider.round {
+     border-radius: 34px;
+}
+.slider.round:before {
+     border-radius: 50%;
+}
+
+
+/* ANIMATION */
+
+@keyframes bounce-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes show-up {
+    30% {
+        opacity: 0;
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
